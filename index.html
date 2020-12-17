@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Game</title>
+    <link href="css/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-orange-500 overflow-hidden">
+    <div class="container mx-auto h-screen flex flex-col">
+      <h1 class="mx-auto mt-4 font-bold text-5xl text-white">whack a mole</h1>
+      <div class="mx-auto mt-2 font-bold text-2xl text-white flex items-center">
+        <span class="font-sans font-light">SCORE</span>
+        <span class="ml-4 mr-4 font-sans font-light">:</span>
+        <span class="skor">0</span>
+        <button
+          class="button-start bg-yellow-500 px-6 rounded-full uppercase focus:outline-none py-1 ml-10 font-sans font-light"
+        >
+          Start
+        </button>
+        <button
+          class="button-boost bg-red-600 px-6 rounded-full uppercase focus:outline-none py-1 ml-10 font-sans font-light"
+        >
+          Boost
+        </button>
+        <button
+          class="button-bounty bg-green-500 px-6 rounded-full uppercase focus:outline-none py-1 ml-10 font-sans font-light"
+        >
+          10x Bounty
+        </button>
+      </div>
+      <div class="progress-wrapper shadow h-10 mx-auto mt-8 bg-gray-300">
+        <div class="progress-bar bg-green-400"></div>
+      </div>
+      <div class="wrapper mx-auto flex flex-col justify-between">
+        <div class="up flex justify-around">
+          <div class="element relative overflow-hidden">
+            <img
+              id="1"
+              class="z-30 pow absolute top-0"
+              src="img/pow.png"
+              alt=""
+            />
+            <div class="tanah absolute w-full h-10 md:h-24 xl:h-24 z-20"></div>
+            <div data-id="1" class="tikus absolute w-full h-full z-10"></div>
+          </div>
+          <div class="element relative overflow-hidden">
+            <img
+              id="2"
+              class="z-30 pow absolute top-0"
+              src="img/pow.png"
+              alt=""
+            />
+            <div
+              class="tanah absolute w-full h-10 md:h-24 xl:h-24 z-20 z-20"
+            ></div>
+            <div data-id="2" class="tikus absolute w-full h-full z-10"></div>
+          </div>
+          <div class="element relative overflow-hidden">
+            <img
+              id="3"
+              class="z-30 pow absolute top-0"
+              src="img/pow.png"
+              alt=""
+            />
+            <div
+              class="tanah absolute w-full h-10 md:h-24 xl:h-24 z-20 z-20"
+            ></div>
+            <div data-id="3" class="tikus absolute w-full h-full z-10"></div>
+          </div>
+        </div>
+        <div class="up flex justify-around">
+          <div class="element relative overflow-hidden">
+            <img
+              id="4"
+              class="z-30 pow absolute top-0"
+              src="img/pow.png"
+              alt=""
+            />
+            <div
+              class="tanah absolute w-full h-10 md:h-24 xl:h-24 z-20 z-20"
+            ></div>
+            <div data-id="4" class="tikus absolute w-full h-full z-10"></div>
+          </div>
+          <div class="element relative overflow-hidden">
+            <img
+              id="5"
+              class="z-30 pow absolute top-0"
+              src="img/pow.png"
+              alt=""
+            />
+            <div
+              class="tanah absolute w-full h-10 md:h-24 xl:h-24 z-20 z-20"
+            ></div>
+            <div data-id="5" class="tikus absolute w-full h-full z-10"></div>
+          </div>
+          <div class="element relative overflow-hidden">
+            <img
+              id="6"
+              class="z-30 pow absolute top-0"
+              src="img/pow.png"
+              alt=""
+            />
+            <div
+              class="tanah absolute w-full h-10 md:h-24 xl:h-24 z-20 z-20"
+            ></div>
+            <div data-id="6" class="tikus absolute w-full h-full z-10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="explode" src="sound/explode.wav"></audio>
+    <audio id="pop" src="sound/pop.wav"></audio>
+    <audio loop id="back" autoplay>
+      <source src="sound/bg.wav" />
+    </audio>
+  </body>
+  <script src="js/main.js"></script>
+</html>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Lacquer&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Lacquer", "sans";
+}
+
+.wrapper {
+  width: 100%;
+  cursor: url(../img/hammer1.png), auto;
+}
+
+.wrapper .element {
+  width: 20%;
+  height: 200px;
+}
+
+.wrapper .element .tanah {
+  background-image: url(../img/tanah.png);
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+}
+
+.wrapper .element .tikus {
+  background-image: url(../img/tikus.png);
+  background-size: 60%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  bottom: -60%;
+  -webkit-transition: bottom 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.wrapper .element .pow {
+  display: none;
+}
+
+.wrapper .element .pow.active {
+  display: block;
+}
+
+.wrapper .element.muncul .tikus {
+  bottom: 0;
+}
+
+.wrapper:active {
+  cursor: url(../img/hammer2.png), auto;
+}
+
+.button-start {
+  -webkit-animation: big 0.2s infinite;
+          animation: big 0.2s infinite;
+}
+
+.button-start.hidden {
+  display: none;
+}
+
+.button-bounty {
+  display: none;
+  -webkit-animation: big 0.2s infinite;
+          animation: big 0.2s infinite;
+}
+
+.button-bounty.show {
+  display: block;
+}
+
+.button-boost {
+  display: none;
+  -webkit-animation: big 0.2s infinite;
+          animation: big 0.2s infinite;
+}
+
+.button-boost.show {
+  display: block;
+}
+
+@-webkit-keyframes big {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes big {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper .element {
+    height: 100px !important;
+    width: 30%;
+  }
+}
+
+.progress-wrapper {
+  width: 85%;
+  display: none;
+  -webkit-transition: display 0.1s ease-in;
+  transition: display 0.1s ease-in;
+}
+
+.progress-wrapper.active {
+  display: block;
+}
+
+.progress-wrapper .progress-bar {
+  height: 100%;
+  width: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+/*# sourceMappingURL=main.css.map */
